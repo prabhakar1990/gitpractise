@@ -1,0 +1,15 @@
+vesrion: "2"
+  
+  services:
+    mysql:
+     images: mysql
+     environment:
+      MYSQL_ROOT_PASWORD: password
+
+    wordpress:
+      images: wordpress
+      ports:
+        -8080:80
+       environment:
+         WORDPRESS_DB_PASSWORD: password
+
